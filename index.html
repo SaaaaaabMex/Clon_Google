@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/images/unnamed.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-right-section">
+                <li>
+                    <a href="https://mail.google.com/mail/?tab=wm&authuser=0&ogbl">Gmail</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com.ar/imghp?hl=es&tab=wi&authuser=0&ogbl">Imágenes</a>
+                </li>
+                <li class="icon menu-icon">
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="assets/images/perfil.jpg" alt="User picture">
+                    </a>
+                </li>
+            </ul>o
+        </nav>
+    </header>
+    <main>
+        <section class="main-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+        </section>
+        <section class="main-input">
+            <div class="main-input-container">
+                <span class="icon search-icon"></span>
+                <input type="text" id="searchValue">
+                <button type="button" class="icon microphone-icon" onclick="voiceSearchModalOpen()">
+                </button>
+            </div>
+        </section>
+        <section class="main-buttons">
+            <div>
+                <button type="button" onclick="searchValue()">
+                    Buscar con Google
+                </button>
+            </div>
+            <div>
+                <button type="button" onclick="luck()">
+                    Me siento con suerte
+                </button>
+            </div>
+        </section>
+        <section class="main-message">
+            <div>
+                <p>
+                    Ofrecido por Google en: 
+                    <a href="https://www.google.com.sv/setprefs?sig=0_6WgfE0CfjXt1RXiDKvWbmoOlzXs%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ2ZgBCA8">English</a>
+                    <a href="https://www.google.com.sv/setprefs?sig=0_6WgfE0CfjXt1RXiDKvWbmoOlzXs%3D&amp;hl=es-419&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ2ZgBCBA">Español (Latinoamérica)</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__section footer__section--bottom-line">
+            <span class="footer__language">México</span>
+        </section>
+        <nav class="footer__section footer__section--spaced-items">
+            <ul class="footer__list">
+                <li class="footer__list-item"><a class="footer__link" href="https://about.google/?utm_source=google-MX&utm_medium=referral&utm_campaign=hp-footer&fg=1">Sobre Google</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="https://ads.google.com/intl/es-419_mx/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidad</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="https://smallbusiness.withgoogle.com/intl/es-419_mx/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=MX#!/">Negocios</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="https://www.google.com/search/howsearchworks/?fg=1">Cómo funciona la búsqueda</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a class="footer__link" href="https://policies.google.com/privacy?hl=es-419&fg=1">Privacidad</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="https://policies.google.com/terms?hl=es-419&fg=1">Condiciones</a></li>
+                <li class="footer__list-item footer__list-item--no-margin-right"><a class="footer__link" href="#">Preferencias</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <div class="modal-voice-search hide-modal">
+        <button onclick="voiceSearchModalClose()" class="voice-search-close-modal">
+            ×
+        </button>
+		<div class="voice-search-result">
+			<p contenteditable class="voice-search-result-text"></p>
+		</div>
+		<div class="voice-search-animation">
+			<span class="voice-search-microphone-icon fas fa-microphone"></span>
+			<span class="voice-search-microphone-border"></span>
+		</div>
+	</div>
+    <script src="js/search.js"></script>
+    <script src="js/voice-search.js"></script>
+</body>
+</html>
